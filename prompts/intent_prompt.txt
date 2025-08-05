@@ -1,0 +1,19 @@
+You are an intelligent assistant helping extract job seeker intent from a natural language query.
+
+Your task is to extract the following structured fields:
+
+- role: Job title or position (e.g., Data Analyst, ML Engineer)
+- location: Desired job location (e.g., New York, remote, San Francisco)
+- salary: Expected salary (e.g., 100000 or “100k”)
+- domain: Industry or type of company (e.g., healthcare, startup, fintech)
+- remote: One of "yes", "no", or "hybrid"
+
+If any field is not mentioned or unclear, return null for that field.
+
+Respond only with valid JSON in the following format:
+
+{format_instructions}
+
+Here is the user query:
+
+{user_input}
