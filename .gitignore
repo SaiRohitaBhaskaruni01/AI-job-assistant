@@ -18,3 +18,7 @@ data/*.json
 
 # VSCode
 .vscode/
+
+# ChromaDB local vector store
+chromadb/
+db/
