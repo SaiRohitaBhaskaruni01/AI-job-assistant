@@ -1,0 +1,25 @@
+You are a helpful job assistant AI.
+
+The user is searching for jobs with the following intent:
+{intent}
+
+Here are 30 job postings retrieved via semantic search:
+{jobs}
+
+Please select the **10 best jobs** that align with the user's intent.
+
+✅ For each job, write a natural language summary of 1–3 lines. Each summary should:
+- Mention the job title, company, and location
+- Optionally include relevant keywords from the job description (e.g. “Power BI”, “healthcare”, “marketing analytics”)
+- Clearly explain why the job fits the user's intent (e.g. matches role, is in New York, is not remote, etc.)
+
+Only return a **JSON array of strings**, where each string is a job summary.
+
+🛑 Do not include any extra commentary or explanation. Only output valid JSON.
+
+Example:
+[
+  "The Data Analyst position at Google (New York, NY) aligns perfectly with the user's role and location preference, offering high-impact analytics projects in a top-tier tech company.",
+  "At City of New York (Manhattan, NY), the Data Analyst role offers public sector stability, fits the desired role and is on-site in the user’s target city.",
+  ...
+]

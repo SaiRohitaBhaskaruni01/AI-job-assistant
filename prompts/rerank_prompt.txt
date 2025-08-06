@@ -17,12 +17,12 @@ Be thoughtful in matching based on:
 Return your results as a JSON array like this:
 
 [
-  {
+  {{
     "title": "...",
     "company": "...",
     "location": "...",
     "reason": "..."
-  }
+  }}
 ]
 
 Do NOT include any commentary, headers, or extra text — return only valid JSON.
