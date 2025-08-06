@@ -1,7 +1,7 @@
 import streamlit as st
 from app.intent_parser import parse_intent
 from app.followup import is_critical_missing, get_followup_question
-from app.job_repsonser_final import JobRetriever
+from app.job_response_final import JobRetriever
 
 st.set_page_config(page_title="Job Assistant AI", page_icon="🤖")
 
