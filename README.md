@@ -4,6 +4,8 @@
 A conversational job assistant that helps users find the most relevant job opportunities through natural language input. It leverages **GPT-4o**, **LangChain**, and **ChromaDB** to parse user intent, retrieve similar job postings, and rerank them using an LLM with explanations.
 
 ---
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/572f1f6d-7d82-492f-ab22-a143a4bfc031" />
+
 
 ## 🧩 Features
 
