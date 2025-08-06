@@ -2,7 +2,7 @@ import os
 import json
 from app.intent_parser import parse_intent
 from app.followup import is_critical_missing, get_followup_question
-from app.job_repsonser_final import JobRetriever
+from app.job_response_final import JobRetriever
 
 def main():
     print("👋 Welcome to the Job Assistant!")
@@ -38,7 +38,7 @@ def main():
     with open("history/final_intent.json", "w") as f:
         json.dump(intent, f, indent=2)
 
-    # 4. Retrieve and rerank jobs
+    # 4. Retrieve and rerank jobs, heart of the RAG system
     retriever = JobRetriever()
     results = retriever.retrieve_jobs(intent)
 

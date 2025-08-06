@@ -17,55 +17,6 @@ A conversational job assistant that helps users find the most relevant job oppor
 
 ---
 
-🔹 Phase 1: Intent Understanding (Parsing + Clarification)
-─────────────────────────────────────────────────────────────
-        🧑 User Input Query (Natural Language)
-                        │
-                        ▼
-      📄 intent_parser.py → Extract 5 fields:
-           - role (required)
-           - location (required)
-           - salary (required)
-           - domain (optional)
-           - remote (optional)
-                        │
-                        ▼
-     ❓ followup.py → Ask GPT-4o follow-up questions if required fields are missing
-                        │
-                        ▼
-     ✅ final_intent.json saved in history/
-
-─────────────────────────────────────────────────────────────
-🔹 Phase 2: Vector Embedding & Storage
-─────────────────────────────────────────────────────────────
-      📊 preprocess_data.py → Clean job data → jobs_minimal.csv
-                        │
-                        ▼
-     🧠 embedding_store.py → Convert job postings to vectors using
-        sentence-transformers/all-MiniLM-L6-v2
-                        │
-                        ▼
-       💾 Store vectors in ChromaDB (vector DB)
-
-─────────────────────────────────────────────────────────────
-🔹 Phase 3: Retrieval + GPT Reranking (RAG)
-─────────────────────────────────────────────────────────────
-     🧠 job_retriever.py → Perform semantic search in ChromaDB
-               → Fetch top 30 relevant job embeddings
-                        │
-                        ▼
-     🧠 job_responser_final.py →
-        🔁 Pass top 30 into GPT-4o with rerank_prompt.txt
-        🔁 GPT-4o performs semantic reranking
-        🔁 Return top 10 best-fit jobs with explanation
-                        │
-                        ▼
-     ✅ Final results → Shown in CLI or Streamlit frontend
-
-─────────────────────────────────────────────────────────────
-
-
-
 ## ⚙️ Project Structure
 
 ```
